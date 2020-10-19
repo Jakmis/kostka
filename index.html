@@ -8,7 +8,7 @@
 
         <!-- Bootstrap CSS -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
+        <link rel="stylesheet" href="css/styly.css">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -19,12 +19,77 @@
     <body>
         <h1 class="text-center">Hra Kostka</h1>
         <div class="container">
-            <figure>
-                <img id="cube" src="img/kostka6.png" alt="Kostka">
-            </figure>
-            <div id="result"></div>
-            <button id="game" class="btn btn-danger">Hraj</button>
+            <hr>
+            <h2>Hra pro jednoho hrače</h2>
+            <div class="row">
+                <div class="col-md-6">
+                <figure>
+                    <img id="cube" src="img/kostka6.png" alt="Kostka">
+                </figure>
+                <!--<div id="result">Vysledek</div>-->
+                <button id="game" class="btn btn-primary">Hraj</button>
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-dark table-bordered col-md-6">
+                        <thead>
+                          <tr>
+                            <th scope="col">Počet hodů</th>
+                            <th scope="col">Hod</th>
+                            <th scope="col">Součet hodů</th>
+                            <th scope="col">Průměr hodů</th>
+                            <th scope="col">Nejvyšší hod</th>
+                            <th scope="col">Nejnižší hod</th>
+                          </tr>
+                          <tr>
+                            <th scope="col" class="invisible" id="pocet"></th>
+                            <th scope="col" class="invisible" id="hod"></th>
+                            <th scope="col" class="invisible" id="soucet"></th>
+                            <th scope="col" class="invisible" id="prumer"></th>
+                            <th scope="col" class="invisible" id="max"></th>
+                            <th scope="col" class="invisible" id="min"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                </div> 
+            </div>
         </div>
+            <div class="container">
+                <hr> 
+                <h2>Hra pro dva hrače</h2>
+            <div class="row">
+                <div class="col-md-4"> 
+                    <p class="Player1">Hráč 1</p> 
+                    <img class="img1" id="cube1" src="img/kostka6.png">
+                    <p id="result1"></p>
+                </div>
+                <div class="col-md-4">
+                    <h1 id="vysledek"></h1>
+                </div> 
+                <div class="col-md-4"> 
+                    <p class="Player2">Hráč 2</p> 
+                    <img class="img2" id="cube2" src="img/kostka6.png">
+                    <p id="result2"></p>
+                </div>
+
+            </div> 
+            <div> 
+                <button type="button" class="btn btn-primary" onClick="rollTheDice()"> 
+                    Hraj 
+                </button> 
+            </div> 
+            <div> 
+                <button type="button" class="btn btn-secondary" onClick="editNames()"> 
+                    Upravit jména 
+                </button> 
+            </div>
+            </div>
+        </div>
+
+        <footer class="text-center">
+            Jakub Hudymač, IT2
+        </footer>
 
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
