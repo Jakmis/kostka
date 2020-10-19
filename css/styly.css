@@ -1,0 +1,28 @@
+.container { 
+    width: 70%; 
+    margin: auto; 
+    text-align: center; 
+}
+.cube { 
+    text-align: center; 
+    display: inline-block; 
+    margin: 10px; 
+}
+body {  
+    margin: 0; 
+}
+img { 
+    border: 1px solid black;
+}
+h1{
+    padding: 50px;
+}
+h2{
+    padding: 25px;
+}
+button{
+    margin: 15px;
+}
+footer{
+    margin: 80px;
+}
